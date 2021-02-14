@@ -104,8 +104,9 @@ if __name__ == '__main__':
     bin_used_list[3].append(bestFitDecreasing(blockSize, items))
     time_used_list[3].append(time.time()-time_start)
   
-  name_fit = ['first fit', 'best fit', 'first fit decreasing', 'best fit decreasing']
+  name_fit = ['first fit', 'best fit', 'first fit decr', 'best fit decr']
 
+  print(bin_used_list)
   time_used = []
   bin_used = []
   for i in range(4):
@@ -155,7 +156,7 @@ if __name__ == '__main__':
 	'''
 
     ax.text(rect.get_x() + rect.get_width()/2.,  height_0 + diff_minmax / 2,
-      '%d' % height_0,
+      '%f' % height_0,
       ha='center', va='bottom')
 
   fig.savefig("nbins_"+str(blockSize)+"_"+str(n_item)+".png")
